@@ -5,4 +5,4 @@
 /test.py
 /model_modified.py
 /model_with_cnn.py
-/.gitignore
+/model_base.py
