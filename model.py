@@ -26,7 +26,7 @@ def loss_function(preds, labels):
 	Returns:
 		scalar loss
 	"""
-	loss = tf.keras.backend.categorical_crossentropy(labels[:,-1], preds[:,-1], from_logits=False)
+	loss = tf.keras.backend.categorical_crossentropy(labels[:,-1], preds[:,-1], from_logits=True)
 	loss = tf.reduce_mean(loss)
 	return loss
 
