@@ -39,17 +39,17 @@ class MANN(tf.keras.Model):
 		self.layer2 = tf.keras.layers.LSTM(num_classes, return_sequences=True)
 
 	def call(self, input_images, input_labels):
-    input_labels = tf.concat([input_labels[:,:-1], tf.zeros_like(tf.expand_dims(input_labels[:,-1], axis=1))], axis=1)
-    X = tf.concat([input_images, input_labels], -1)
-    output = []
-    for i in range(input_shape[1]):
-      x = X[:,i,:,:]
-      x = self.layer1(x)
-      x = self.layer2(x)
-      output.append(x)
-    output = tf.stack(output)
-    output = tf.transpose(output, [1, 0, 2, 3])
-    return output
+		input_labels = tf.concat([input_labels[:,:-1], tf.zeros_like(tf.expand_dims(input_labels[:,-1], axis=1))], axis=1)
+		X = tf.concat([input_images, input_labels], -1)
+		output = []
+		for i in range(X.shape[1]):
+			x = X[:,i,:,:]
+			x = self.layer1(x)
+			x = self.layer2(x)
+			output.append(x)
+		output = tf.stack(output)
+		output = tf.transpose(output, [1, 0, 2, 3])
+		return output
 
 print('MANN with LSTM')
 ims = tf.placeholder(tf.float32, shape=(
