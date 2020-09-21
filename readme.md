@@ -6,7 +6,7 @@ Simple MANN is a meta-learning implementation inspired by the paper OPTIMIZATION
 Create virtualenv and install the requirements using `pip install -r requirements.txt`
 
 ### Data
-In order to run the experiment you need to download the data from: https://github.com/brendenlake/omniglot/tree/master/python. See [`readme`](data/README.md) for more details.
+In order to run the experiment you need to download the data from: https://github.com/brendenlake/omniglot/tree/master/python. See [`readme`](data/readme.md) for more details.
 
 # Run
 Default **1-shot 5-way learning with batch size 16**
