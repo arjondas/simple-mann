@@ -22,7 +22,13 @@ For example: 2-shot 7-way with batch size 10
 ```
 python model.py --num_samples=7 --num_classes=2 --meta_batch_size=10
 ```
-
+### Extra
+Run the load_data.py to visualize the meta-learning problem presented to the network
+```
+python load_data.py
+```
+Data for 1-shot(1 row for query set) 5-way meta-learning problem with batch size of 1(for better visualization)
+![Sample data](sample_data.png?raw=true "Data Loader sample data")
 # Result
-Accuracy vs Iteration graph for experimentation on 1-shot 5-way with batch size 16:
-"Coming Soon"
+Accuracy vs Iteration graph for experimentation on 1-shot 5-way with batch size 16
+![Accuracy vs Iteration](simple_mann.png?raw=true "Simple MANN")
